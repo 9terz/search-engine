@@ -1,0 +1,8 @@
+include ./index.pug
+div(class='col-md-6 col-md-offset-3')
+  each item in json
+    div(class="panel panel-default")
+      div(class='panel-body')
+        a(href=item.name)= item.title
+        br
+        em= item.text+' ...'

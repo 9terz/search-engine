@@ -1,6 +1,25 @@
 html
   head
+    link(
+    rel="stylesheet",
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css",
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u",
+    crossorigin="anonymous")
     title= title
-  body
-    h1= message
-    p #{name}'s Pug source code!
+    div(class="page-header col-md-8 col-md-offset-2")
+      h1 Slon Search Engine
+      body
+      form(name="send-id", method="post" action ='/query')
+        div(class='col-md-2')
+          span(class ='glyphicon glyphicon-tent pull-right')
+          strong(class='pull-right') slon
+        div(class='col-md-8')
+          input(type='text' name='kw' class='form-control' placeholder='What do you want ? search it la')
+        div(class='col-md-2')
+          div(class='checkbox')
+            input(type='checkbox' id='tf' value='1' name='tf')
+            em Search by TF-IDF
+            br
+            input(type='checkbox' id='pr' value='3' name='pr')
+            em Search by PageRank
+          input(type="submit" class='btn btn-success' value="Search by TF-IDF")

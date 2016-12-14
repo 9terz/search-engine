@@ -9,9 +9,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel": "^6.5.2",
+    "babel-polyfill": "^6.20.0",
+    "body-parser": "^1.15.2",
     "express": "^4.14.0",
+    "morgan": "^1.7.0",
     "neo4j": "^2.0.0-RC2",
     "neo4j-driver": "^1.1.0-M03",
     "pug": "^2.0.0-beta6"
+  },
+  "devDependencies": {
+    "vue": "^2.0.0-rc.8"
   }
 }
